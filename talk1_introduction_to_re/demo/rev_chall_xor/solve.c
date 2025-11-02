@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+	char flag[0xe];
+	flag[0] = 0x24;
+	flag[1] = 0x2e;
+	flag[2] = 0x23;
+	flag[3] = 0x25;
+	flag[4] = 0x39;
+	flag[5] = 0x32;
+	flag[6] = 0x23;
+	flag[7] = 0x31;
+	flag[8] = 0x31;
+	flag[9] = 0x35;
+	flag[10] = 0x2d;
+	flag[0xb] = 0x30;
+	flag[0xc] = 0x26;
+	flag[0xd] = 0x3f;
+	for (int i = 0; i < 14; i++)
+		printf("%c", 66 ^ flag[i]);
+}
